@@ -34,7 +34,12 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/send_udp.o \
+	${OBJECTDIR}/send_tcp.o \
+	${OBJECTDIR}/udp_server.o \
+	${OBJECTDIR}/tcp_server.o \
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/network_manager.o
 
 
 # C Compiler Flags
@@ -51,20 +56,49 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=
+LDLIBSOPTIONS=-lcurses /usr/lib/libev.a /usr/lib/libev.so
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/deepdown
 
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/deepdown: /usr/lib/libev.a
+
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/deepdown: /usr/lib/libev.so
+
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/deepdown: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/deepdown ${OBJECTFILES} ${LDLIBSOPTIONS} 
+
+${OBJECTDIR}/send_udp.o: send_udp.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/send_udp.o send_udp.c
+
+${OBJECTDIR}/send_tcp.o: send_tcp.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/send_tcp.o send_tcp.c
+
+${OBJECTDIR}/udp_server.o: udp_server.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/udp_server.o udp_server.c
+
+${OBJECTDIR}/tcp_server.o: tcp_server.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/tcp_server.o tcp_server.c
 
 ${OBJECTDIR}/main.o: main.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.c
+
+${OBJECTDIR}/network_manager.o: network_manager.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/network_manager.o network_manager.c
 
 # Subprojects
 .build-subprojects:
