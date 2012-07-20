@@ -34,12 +34,12 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/send_udp.o \
-	${OBJECTDIR}/send_tcp.o \
-	${OBJECTDIR}/udp_server.o \
-	${OBJECTDIR}/tcp_server.o \
-	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/network_manager.o
+	${OBJECTDIR}/_ext/1150044396/send_udp.o \
+	${OBJECTDIR}/_ext/1150044396/network_manager.o \
+	${OBJECTDIR}/_ext/1150044396/send_tcp.o \
+	${OBJECTDIR}/_ext/1150044396/udp_server.o \
+	${OBJECTDIR}/_ext/1150044396/tcp_server.o \
+	${OBJECTDIR}/_ext/1150044396/main.o
 
 
 # C Compiler Flags
@@ -56,13 +56,11 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-lcurses /usr/lib/libev.a /usr/lib/libev.so
+LDLIBSOPTIONS=-lcurses /usr/lib/libev.so
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/deepdown
-
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/deepdown: /usr/lib/libev.a
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/deepdown: /usr/lib/libev.so
 
@@ -70,35 +68,35 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/deepdown: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/deepdown ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
-${OBJECTDIR}/send_udp.o: send_udp.c 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/_ext/1150044396/send_udp.o: /d/wo/c/DeepDown/src/send_udp.c 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1150044396
 	${RM} $@.d
-	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/send_udp.o send_udp.c
+	$(COMPILE.c) -g -I/d/wo/c/DeepDown/include -I/d/wo/c/lib/libev/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1150044396/send_udp.o /d/wo/c/DeepDown/src/send_udp.c
 
-${OBJECTDIR}/send_tcp.o: send_tcp.c 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/_ext/1150044396/network_manager.o: /d/wo/c/DeepDown/src/network_manager.c 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1150044396
 	${RM} $@.d
-	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/send_tcp.o send_tcp.c
+	$(COMPILE.c) -g -I/d/wo/c/DeepDown/include -I/d/wo/c/lib/libev/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1150044396/network_manager.o /d/wo/c/DeepDown/src/network_manager.c
 
-${OBJECTDIR}/udp_server.o: udp_server.c 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/_ext/1150044396/send_tcp.o: /d/wo/c/DeepDown/src/send_tcp.c 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1150044396
 	${RM} $@.d
-	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/udp_server.o udp_server.c
+	$(COMPILE.c) -g -I/d/wo/c/DeepDown/include -I/d/wo/c/lib/libev/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1150044396/send_tcp.o /d/wo/c/DeepDown/src/send_tcp.c
 
-${OBJECTDIR}/tcp_server.o: tcp_server.c 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/_ext/1150044396/udp_server.o: /d/wo/c/DeepDown/src/udp_server.c 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1150044396
 	${RM} $@.d
-	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/tcp_server.o tcp_server.c
+	$(COMPILE.c) -g -I/d/wo/c/DeepDown/include -I/d/wo/c/lib/libev/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1150044396/udp_server.o /d/wo/c/DeepDown/src/udp_server.c
 
-${OBJECTDIR}/main.o: main.c 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/_ext/1150044396/tcp_server.o: /d/wo/c/DeepDown/src/tcp_server.c 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1150044396
 	${RM} $@.d
-	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.c
+	$(COMPILE.c) -g -I/d/wo/c/DeepDown/include -I/d/wo/c/lib/libev/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1150044396/tcp_server.o /d/wo/c/DeepDown/src/tcp_server.c
 
-${OBJECTDIR}/network_manager.o: network_manager.c 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/_ext/1150044396/main.o: /d/wo/c/DeepDown/src/main.c 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1150044396
 	${RM} $@.d
-	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/network_manager.o network_manager.c
+	$(COMPILE.c) -g -I/d/wo/c/DeepDown/include -I/d/wo/c/lib/libev/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1150044396/main.o /d/wo/c/DeepDown/src/main.c
 
 # Subprojects
 .build-subprojects:

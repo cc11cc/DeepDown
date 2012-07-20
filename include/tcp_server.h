@@ -12,7 +12,7 @@
 extern "C" {
 #endif
 
-
+    extern void init(void);
 
 
 #ifdef	__cplusplus

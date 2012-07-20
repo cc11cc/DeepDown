@@ -2,15 +2,15 @@
 <configurationDescriptor version="80">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles" displayName="头文件" projectFiles="true">
-      <itemPath>tcp_server.h</itemPath>
+      <itemPath>/d/wo/c/DeepDown/include/tcp_server.h</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles" displayName="源文件" projectFiles="true">
-      <itemPath>main.c</itemPath>
-      <itemPath>network_manager.c</itemPath>
-      <itemPath>send_tcp.c</itemPath>
-      <itemPath>send_udp.c</itemPath>
-      <itemPath>tcp_server.c</itemPath>
-      <itemPath>udp_server.c</itemPath>
+      <itemPath>/d/wo/c/DeepDown/src/main.c</itemPath>
+      <itemPath>/d/wo/c/DeepDown/src/network_manager.c</itemPath>
+      <itemPath>/d/wo/c/DeepDown/src/send_tcp.c</itemPath>
+      <itemPath>/d/wo/c/DeepDown/src/send_udp.c</itemPath>
+      <itemPath>/d/wo/c/DeepDown/src/tcp_server.c</itemPath>
+      <itemPath>/d/wo/c/DeepDown/src/udp_server.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles" displayName="资源文件" projectFiles="true">
     </logicalFolder>
@@ -26,6 +26,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>/d/wo/c/DeepDown</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
@@ -34,10 +37,15 @@
         <compilerSet>default</compilerSet>
       </toolsSet>
       <compileType>
+        <cTool>
+          <incDir>
+            <pElem>/d/wo/c/DeepDown/include</pElem>
+            <pElem>/d/wo/c/lib/libev/include</pElem>
+          </incDir>
+        </cTool>
         <linkerTool>
           <linkerLibItems>
             <linkerLibStdlibItem>Curses</linkerLibStdlibItem>
-            <linkerLibFileItem>/usr/lib/libev.a</linkerLibFileItem>
             <linkerLibFileItem>/usr/lib/libev.so</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
